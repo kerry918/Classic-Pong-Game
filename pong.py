@@ -60,25 +60,37 @@ pen.write("Player A: 0  Player B: 0", align="center", font=("Courier", 20, "norm
 # Create a function
 def paddle_a_up():
     y = paddle_a.ycor()  # get the original y coordinate of the paddle
-    y += 20
+    if y < 290:
+        y += 20
+    else:
+        y = 290
     paddle_a.sety(y)  # set the paddle y coordinate to the new y coordinate
 
 
 def paddle_a_down():
     y = paddle_a.ycor()  # get the original y coordinate of the paddle
-    y -= 20
+    if y > -290:
+        y -= 20
+    else:
+        y = -290
     paddle_a.sety(y)  # set the paddle y coordinate to the new y coordinate
 
 
 def paddle_b_up():
     y = paddle_b.ycor()  # get the original y coordinate of the paddle
-    y += 20
+    if y < 290:
+        y += 20
+    else:
+        y = 290
     paddle_b.sety(y)  # set the paddle y coordinate to the new y coordinate
 
 
 def paddle_b_down():
     y = paddle_b.ycor()  # get the original y coordinate of the paddle
-    y -= 20
+    if y > -290:
+        y -= 20
+    else:
+        y = -290
     paddle_b.sety(y)  # set the paddle y coordinate to the new y coordinate
 
 
